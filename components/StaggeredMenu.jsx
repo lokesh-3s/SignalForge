@@ -21,7 +21,7 @@ export const StaggeredMenu = ({
   displaySocials = true,
   displayItemNumbering = true,
   className,
-  logoUrl = '/chain-forecast.svg',
+  logoUrl = '/signal-forge.svg',
   menuButtonColor = '#fff',
   openMenuButtonColor = '#fff',
   changeMenuColorOnOpen = true,
@@ -417,7 +417,7 @@ export const StaggeredMenu = ({
               className="sm-logo flex items-center select-none"
               aria-label="Logo">
               <img
-                src={logoUrl || '/chain-forecast.svg'}
+                src={logoUrl || '/signal-forge.svg'}
                 alt="Logo"
                 className="sm-logo-img block h-8 w-auto object-contain dark:invert"
                 draggable={false}

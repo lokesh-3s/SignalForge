@@ -410,10 +410,10 @@ export default function Dashboard() {
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-4xl font-bold text-foreground ivy-font mb-2">
-              Sales Forecasting & CRM Dashboard
+              Outreach Intelligence Dashboard
             </h1>
             <p className="text-muted-foreground ivy-font">
-              AI-powered sales predictions and customer segmentation analytics
+              AI-powered signal analysis, prospect scoring, and automated outreach campaign management
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -422,7 +422,7 @@ export default function Dashboard() {
             </Badge>
             <Button className="bg-emerald-500 hover:bg-emerald-600 text-white ivy-font">
               <Target className="h-4 w-4 mr-2" />
-              Launch Campaign
+              Launch Outreach
             </Button>
           </div>
         </div>
@@ -430,8 +430,8 @@ export default function Dashboard() {
         {/* Dynamic Upload & Analyze Section */}
         <Card className="border-border/40 backdrop-blur-sm bg-card/50">
           <CardHeader>
-            <CardTitle className="ivy-font">Upload Sales Data (CSV)</CardTitle>
-            <CardDescription className="ivy-font">Send data to FastAPI backend for forecasting, segmentation & blockchain logging.</CardDescription>
+            <CardTitle className="ivy-font">Upload Prospect Data (CSV)</CardTitle>
+            <CardDescription className="ivy-font">Send prospect data to AI engine for signal analysis, intent scoring & outreach strategy generation.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             {/* File Upload */}

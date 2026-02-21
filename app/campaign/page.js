@@ -20,18 +20,18 @@ import { toast } from 'react-hot-toast';
 const quickExamples = [
   {
     icon: Coffee,
-    title: 'Sustainable Coffee Launch',
-    brief: 'Launch a social media campaign for our new sustainable coffee brand targeting Gen Z in Mumbai for World Environment Day. Focus on eco-friendly packaging and carbon-neutral delivery.',
+    title: 'SaaS Expansion Outreach',
+    brief: 'Target Series A SaaS companies that recently raised funding for our AI automation platform. Focus on CTOs and VP Engineering via LinkedIn and email. Emphasize ROI, efficiency gains, and technical integration capabilities.',
   },
   {
     icon: Smartphone,
-    title: 'Tech Product Launch',
-    brief: 'Create a comprehensive campaign for launching our AI-powered fitness tracker. Target health-conscious millennials across major Indian cities with emphasis on Instagram and LinkedIn.',
+    title: 'Enterprise Sales Campaign',
+    brief: 'Create a multi-touch outreach sequence for Fortune 500 companies adopting digital transformation. Target IT Directors and CDOs across LinkedIn, email, and phone. Focus on our enterprise solutions and case studies.',
   },
   {
     icon: Shirt,
-    title: 'Fashion Brand Revival',
-    brief: 'Revive interest in our vintage clothing line among fashion enthusiasts. Multi-platform campaign with focus on storytelling, influencer collaborations, and user-generated content.',
+    title: 'Startup Founder Outreach',
+    brief: 'Reach early-stage startup founders in fintech and healthtech who are scaling their teams. Multi-channel approach via LinkedIn, email, and WhatsApp. Highlight our growth-stage solutions and founder success stories.',
   },
 ];
 
@@ -232,8 +232,8 @@ function CampaignPageContent() {
               <Sparkles className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-foreground">AI-Powered Campaign Generator</h1>
-              <p className="text-sm text-muted-foreground">Share your vision, watch AI build a complete campaign workflow</p>
+              <h1 className="text-2xl font-bold text-foreground">AI-Powered Outreach Campaign Generator</h1>
+              <p className="text-sm text-muted-foreground">Describe your outreach goals, watch AI build intelligent multi-channel campaigns</p>
             </div>
           </div>
         </div>
@@ -250,10 +250,10 @@ function CampaignPageContent() {
             className="space-y-6"
           >
             <div className="space-y-3">
-              <h2 className="text-xl font-semibold text-foreground">Describe Your Campaign</h2>
+              <h2 className="text-xl font-semibold text-foreground">Describe Your Outreach Campaign</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Share your marketing vision, and watch AI autonomously create a comprehensive campaign 
-                strategy with research, creative assets, and distribution planning.
+                Share your B2B outreach objectives, and watch AI autonomously create a comprehensive strategy 
+                with signal intelligence, prospect research, personalized content, and multi-channel execution.
               </p>
             </div>
 
@@ -270,14 +270,14 @@ function CampaignPageContent() {
               <Textarea
                 value={brief}
                 onChange={handleBriefChange}
-                placeholder="E.g., Launch a social media campaign for our new sustainable coffee brand targeting Gen Z in Mumbai for World Environment Day. Focus on eco-friendly packaging and carbon-neutral delivery..."
+                placeholder="E.g., Launch a LinkedIn outreach campaign targeting SaaS CTOs in Series A companies who recently raised funding. Focus on our AI automation platform, emphasize ROI and efficiency gains. Include personalized connection requests, follow-up sequences, and content sharing strategy..."
                 className="min-h-[280px] text-sm bg-card border-border text-foreground resize-none"
                 disabled={isLoading || isEnhancing}
               />
               
               <div className="flex items-start justify-between gap-2">
                 <p className="text-xs text-muted-foreground flex-1">
-                  Include: product/service, target audience, occasion, key focus areas, and channels
+                  Include: target audience, industry, company stage, outreach channels, key messaging, and objectives
                 </p>
                 <Button
                   onClick={handleEnhanceBrief}
@@ -398,23 +398,23 @@ function CampaignPageContent() {
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">✓</span>
-                  <span>AI-powered strategic analysis and campaign concept</span>
+                  <span>AI-powered signal intelligence and prospect scoring</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">✓</span>
-                  <span>Audience intelligence and market research</span>
+                  <span>Decision engine for optimal channel and timing selection</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">✓</span>
-                  <span>Auto-generated copy, visuals, and creative assets</span>
+                  <span>Personalized outreach messages and LinkedIn content</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">✓</span>
-                  <span>Distribution strategy and timeline planning</span>
+                  <span>Multi-channel automation across LinkedIn, Email, WhatsApp</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-600 dark:text-emerald-400 mt-0.5">✓</span>
-                  <span>Interactive canvas to review and refine each element</span>
+                  <span>Interactive relationship mapping and execution timeline</span>
                 </li>
               </ul>
             </motion.div>

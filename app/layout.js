@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "ChainForecast - AI-Powered Sales Forecasting & CRM",
-  description: "Advanced retail analytics platform with AI-driven sales forecasting, customer segmentation, and agentic campaign workflows",
+  title: "SignalForge - AI-Powered B2B Outreach Intelligence Engine",
+  description: "Advanced outreach intelligence platform with AI-driven signal analysis, decision engine logic, and automated content generation for B2B sales excellence",
 };
 
 export default function RootLayout({ children }) {
@@ -40,8 +40,8 @@ export default function RootLayout({ children }) {
           }}
         />
         {/* Favicon and meta */}
-        <link rel="icon" href="/chain-forecast.svg" />
-        <link rel="apple-touch-icon" href="/chain-forecast.svg" />
+        <link rel="icon" href="/signal-forge.svg" />
+        <link rel="apple-touch-icon" href="/signal-forge.svg" />
         <meta name="theme-color" content="#0f172a" />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
