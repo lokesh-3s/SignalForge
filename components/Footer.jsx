@@ -11,16 +11,16 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/chain-forecast.svg"
-                alt="ChainForecast Logo"
+                src="/signal-forge.svg"
+                alt="SignalForge Logo"
                 className="h-8 w-8 dark:invert"
               />
               <span className="text-xl font-bold text-slate-900 dark:text-white">
-                ChainForecast
+                SignalForge
               </span>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md">
-              AI-Powered Sales Forecasting & CRM. Predict sales trends, segment customers, and automate campaigns with our intelligent analytics platform.
+              AI-Powered B2B Outreach Intelligence Engine. Analyze buyer signals, predict optimal outreach strategies, and generate personalized content across multiple channels.
             </p>
           </div>
 
@@ -48,18 +48,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#dashboard"
+                  href="/dashboard"
                   className="text-sm text-slate-600 transition-colors hover:text-emerald-500 dark:text-slate-400 dark:hover:text-emerald-400"
                 >
-                  Dashboard
+                  Intelligence
                 </a>
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/campaign"
                   className="text-sm text-slate-600 transition-colors hover:text-emerald-500 dark:text-slate-400 dark:hover:text-emerald-400"
                 >
-                  Contact
+                  Outreach
                 </a>
               </li>
             </ul>
@@ -111,7 +111,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-slate-200/30 pt-8 dark:border-slate-800/60">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-slate-600 dark:text-slate-400">
-              © {currentYear} Finance UI. All rights reserved.
+              © {currentYear} SignalForge. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a

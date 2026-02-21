@@ -56,7 +56,7 @@ export default function Home() {
           <StaggeredMenu
             position="right"
             isFixed={true}
-            logoUrl="/chain-forecast.svg"
+            logoUrl="/signal-forge.svg"
             accentColor="#22c55e"
             colors={["#0f172a", "#111827", "#1f2937"]}
             menuButtonColor={menuBtnColor}
