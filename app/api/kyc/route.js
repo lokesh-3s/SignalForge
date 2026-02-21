@@ -27,13 +27,13 @@ export async function POST(request) {
 
     // Required fields validation - matching the onboarding form
     const requiredFields = [
-      'businessType', 'industry', 'employeeCount',
-      'revenueTier', 'businessModel', 'averageOrderValue',
-      'audienceDemographic', 'purchaseFrequency',
-      'acquisitionChannels', 'activePlatforms',
-      'skuCount', 'peakSeasonality',
-      'primaryObjective', 'painPoints',
-      'documentType'
+      'companyType', 'companySize', 'primaryOutreachObjective',
+      'targetOrganizations', 'relevantSignals', 'personalizationLevel',
+      'signalResponseTime',
+      'usefulContentTypes', 'contentSuggestionFrequency',
+      'aiVoiceOutreachComfort', 'aiExplanationDetail',
+      'primaryOffering', 'idealCustomer', 'outreachGoal', 'salesCycleLength', 'valueProposition',
+      'successMetrics', 'aiExperimentationOpenness', 'platformUsers'
     ];
     const missingFields = requiredFields.filter(field => {
       const value = kycData[field];

@@ -226,69 +226,69 @@ export default function ProfilePage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Business Type */}
+                {/* Company Type */}
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
                   <div className="p-2 rounded-full bg-indigo-500/10">
                     <Building2 className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Business Type</p>
-                    <p className="font-medium ivy-font">{businessProfile.businessType || 'N/A'}</p>
+                    <p className="text-sm text-muted-foreground ivy-font">Company Type</p>
+                    <p className="font-medium ivy-font">{businessProfile.companyType || 'N/A'}</p>
                   </div>
                 </div>
 
-                {/* Industry */}
-                <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
-                  <div className="p-2 rounded-full bg-cyan-500/10">
-                    <Target className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Industry</p>
-                    <p className="font-medium ivy-font">{businessProfile.industry || 'N/A'}</p>
-                  </div>
-                </div>
-
-                {/* Employees */}
+                {/* Company Size */}
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
                   <div className="p-2 rounded-full bg-green-500/10">
                     <UsersIcon className="h-5 w-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Employee Count</p>
-                    <p className="font-medium ivy-font">{businessProfile.employeeCount || 'N/A'}</p>
+                    <p className="text-sm text-muted-foreground ivy-font">Company Size</p>
+                    <p className="font-medium ivy-font">{businessProfile.companySize || 'N/A'}</p>
                   </div>
                 </div>
 
-                {/* Revenue */}
+                {/* Primary Offering */}
+                <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
+                  <div className="p-2 rounded-full bg-cyan-500/10">
+                    <Target className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground ivy-font">Primary Offering</p>
+                    <p className="font-medium ivy-font">{businessProfile.primaryOffering || 'N/A'}</p>
+                  </div>
+                </div>
+
+                {/* Outreach Objective */}
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
                   <div className="p-2 rounded-full bg-emerald-500/10">
                     <DollarSign className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Revenue Tier</p>
-                    <p className="font-medium ivy-font">{businessProfile.revenueTier || 'N/A'}</p>
+                    <p className="text-sm text-muted-foreground ivy-font">Outreach Objective</p>
+                    <p className="font-medium ivy-font">{businessProfile.primaryOutreachObjective || 'N/A'}</p>
                   </div>
                 </div>
 
-                {/* Business Model */}
+                {/* Target Organizations */}
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
                   <div className="p-2 rounded-full bg-violet-500/10">
                     <TrendingUp className="h-5 w-5 text-violet-600 dark:text-violet-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Business Model</p>
-                    <p className="font-medium ivy-font">{businessProfile.businessModel || 'N/A'}</p>
+                    <p className="text-sm text-muted-foreground ivy-font">Target Organizations</p>
+                    <p className="font-medium ivy-font">{businessProfile.targetOrganizations || 'N/A'}</p>
                   </div>
                 </div>
 
-                {/* Primary Objective */}
+                {/* Outreach Goal */}
                 <div className="flex items-start gap-3 p-4 rounded-lg bg-muted/30">
                   <div className="p-2 rounded-full bg-amber-500/10">
                     <Target className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground ivy-font">Primary Objective</p>
-                    <p className="font-medium ivy-font">{businessProfile.primaryObjective || 'N/A'}</p>
+                    <p className="text-sm text-muted-foreground ivy-font">Outreach Goal</p>
+                    <p className="font-medium ivy-font">{businessProfile.outreachGoal || 'N/A'}</p>
                   </div>
                 </div>
               </div>

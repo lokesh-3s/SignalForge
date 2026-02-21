@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import StaggeredMenu from '@/components/StaggeredMenu';
-import { Loader2, ChevronRight, ChevronLeft, CheckCircle2, Building2, DollarSign, Users, Target, Megaphone, Package, TrendingUp, FileCheck, Save, Upload, FileText, X } from 'lucide-react';
+import { Loader2, ChevronRight, ChevronLeft, CheckCircle2, Building2, DollarSign, Users, Target, Megaphone, Package, TrendingUp, FileCheck, Save, Upload, FileText, X, Clock, Sparkles, BarChart3 } from 'lucide-react';
 
 const kycSteps = [
   {
@@ -21,147 +21,171 @@ const kycSteps = [
   },
   {
     id: 1,
-    title: 'Business Identity',
+    title: 'Company & Business Context',
     icon: Building2,
-    description: 'Tell us about your business structure',
+    description: 'Tell us about your company',
     questions: [
       {
-        name: 'businessType',
-        label: 'What is your business type?',
+        name: 'companyType',
+        label: 'What best describes your company type?',
         type: 'select',
-        options: ['LLC', 'Sole Proprietorship', 'Partnership', 'Corporation', 'Other']
+        options: ['B2B (Business-to-Business)', 'B2C (Business-to-Consumer)', 'Mixed B2B / B2C']
       },
       {
-        name: 'industry',
-        label: 'What industry are you in?',
+        name: 'companySize',
+        label: 'What is your company size?',
         type: 'select',
-        options: ['Retail', 'SaaS', 'E-commerce', 'Manufacturing', 'Services', 'Other']
+        options: ['1 to 10 employees', '11 to 50 employees', '51 to 200 employees', '201 to 1000 employees', '1000+ employees']
       },
       {
-        name: 'employeeCount',
-        label: 'How many employees do you have?',
+        name: 'primaryOutreachObjective',
+        label: 'What is your primary outreach objective?',
         type: 'select',
-        options: ['1-10', '11-50', '51-200', '201-500', '500+']
+        options: ['Lead generation', 'Account-based sales (ABM)', 'Partnership development', 'Customer retention or upsell', 'Market research']
       }
     ]
   },
   {
     id: 2,
-    title: 'Financial Overview',
-    icon: DollarSign,
-    description: 'Help us understand your revenue model',
+    title: 'Target Accounts & Intent Signals',
+    icon: Target,
+    description: 'Define your target audience and signals',
     questions: [
       {
-        name: 'revenueTier',
-        label: 'What is your annual revenue range?',
+        name: 'targetOrganizations',
+        label: 'What type of organizations do you primarily target?',
         type: 'select',
-        options: ['<100K', '100K-500K', '500K-1M', '1M-5M', '5M+']
+        options: ['Small and Medium Businesses (SMBs)', 'Mid-market companies', 'Enterprise organizations', 'All of the above']
       },
       {
-        name: 'businessModel',
-        label: 'What is your business model?',
-        type: 'select',
-        options: ['Subscription', 'One-time Purchase', 'Hybrid', 'Freemium']
+        name: 'relevantSignals',
+        label: 'Which signals are most relevant for your outreach strategy? (Select up to three)',
+        type: 'multiselect',
+        options: ['Funding events', 'Hiring or expansion news', 'Product launches or technology shifts', 'LinkedIn activity', 'Market news or competitor movements']
       },
       {
-        name: 'averageOrderValue',
-        label: 'What is your average order value?',
+        name: 'personalizationLevel',
+        label: 'What level of personalization do you prefer in outreach?',
         type: 'select',
-        options: ['<$50', '$50-$200', '$200-$500', '$500-$1000', '$1000+']
+        options: ['High – Customized messaging for each prospect', 'Medium – Industry or role-based messaging', 'Low – Template-driven messaging']
       }
     ]
   },
   {
     id: 3,
-    title: 'Target Audience',
-    icon: Users,
-    description: 'Who are your customers?',
+    title: 'Outreach Timing Preferences',
+    icon: Clock,
+    description: 'Define your outreach timing strategy',
     questions: [
       {
-        name: 'audienceDemographic',
-        label: 'What demographics do you target?',
-        type: 'multiselect',
-        options: ['Gen Z', 'Millennials', 'Gen X', 'Baby Boomers', 'B2B']
-      },
-      {
-        name: 'purchaseFrequency',
-        label: 'How often do customers purchase?',
+        name: 'signalResponseTime',
+        label: 'How quickly would you like to act on high-intent signals?',
         type: 'select',
-        options: ['Daily', 'Weekly', 'Monthly', 'Quarterly', 'Annually']
+        options: ['Immediately (within 24 hours)', 'Within 1 to 3 days', 'Within 4 to 7 days', 'Flexible or strategically timed']
       }
     ]
   },
   {
     id: 4,
-    title: 'Marketing Strategy',
-    icon: Megaphone,
-    description: 'How do you reach customers?',
+    title: 'Content & Authority Building',
+    icon: FileText,
+    description: 'Define your content preferences',
     questions: [
       {
-        name: 'acquisitionChannels',
-        label: 'What are your primary acquisition channels?',
+        name: 'usefulContentTypes',
+        label: 'Which types of AI-generated content would be most useful for your outreach? (Select all that apply)',
         type: 'multiselect',
-        options: ['Social Media', 'SEO', 'Paid Ads', 'Email', 'Referrals', 'Events', 'Direct']
+        options: ['Personalized outreach messages', 'LinkedIn profile optimization', 'Authority-building LinkedIn posts', 'Social content calendars', 'Blog or article drafts']
       },
       {
-        name: 'activePlatforms',
-        label: 'Which platforms are you active on?',
-        type: 'multiselect',
-        options: ['Instagram', 'Facebook', 'LinkedIn', 'Twitter/X', 'TikTok', 'YouTube', 'Pinterest']
+        name: 'contentSuggestionFrequency',
+        label: 'How often would you like to receive content suggestions?',
+        type: 'select',
+        options: ['Daily', 'Weekly', 'Bi-weekly', 'Only when a high-intent opportunity is detected']
       }
     ]
   },
   {
     id: 5,
-    title: 'Operations',
-    icon: Package,
-    description: 'Tell us about your product catalog',
+    title: 'AI & Automation Preferences',
+    icon: Sparkles,
+    description: 'Configure your AI preferences',
     questions: [
       {
-        name: 'skuCount',
-        label: 'How many products/SKUs do you have?',
+        name: 'aiVoiceOutreachComfort',
+        label: 'How comfortable are you with AI-assisted voice outreach?',
         type: 'select',
-        options: ['1-10', '11-50', '51-200', '201-500', '500+']
+        options: ['Very comfortable (full automation is acceptable)', 'Somewhat comfortable (prefer human review)', 'Only for simulation or testing']
       },
       {
-        name: 'peakSeasonality',
-        label: 'When are your peak seasons?',
-        type: 'multiselect',
-        options: ['Q1 (Jan-Mar)', 'Q2 (Apr-Jun)', 'Q3 (Jul-Sep)', 'Q4 (Oct-Dec)', 'Holiday Season', 'No Peak']
+        name: 'aiExplanationDetail',
+        label: 'How detailed should AI explanations be for its recommendations?',
+        type: 'select',
+        options: ['Full reasoning (including signal analysis and logic trace)', 'Summary with top influencing factors', 'Minimal, action-focused output']
       }
     ]
   },
   {
     id: 6,
-    title: 'Business Goals',
-    icon: Target,
-    description: 'What are you trying to achieve?',
+    title: 'Product & Offering Details',
+    icon: Package,
+    description: 'Tell us about your products and services',
     questions: [
       {
-        name: 'primaryObjective',
-        label: 'What is your primary objective?',
+        name: 'primaryOffering',
+        label: 'What does your company primarily offer?',
         type: 'select',
-        options: ['Increase Sales', 'Brand Awareness', 'Customer Retention', 'Market Expansion', 'Lead Generation']
+        options: ['SaaS Software', 'Recruitment Solutions', 'Cybersecurity Tools', 'Marketing Services', 'Consulting', 'Manufacturing', 'Logistics', 'Finance / FinTech', 'EdTech', 'Healthcare']
       },
       {
-        name: 'painPoints',
-        label: 'What are your biggest challenges?',
+        name: 'idealCustomer',
+        label: 'Who is your ideal customer?',
         type: 'multiselect',
-        options: ['Low Conversion', 'High CAC', 'Poor Retention', 'Limited Budget', 'Lack of Analytics', 'Time Constraints']
+        options: ['Startups', 'Small and Medium Businesses (SMEs)', 'Enterprise organizations', 'HR Teams', 'CTO or Technical Teams', 'Sales Teams', 'Operations Teams', 'Government Organizations']
+      },
+      {
+        name: 'outreachGoal',
+        label: 'What is your outreach goal?',
+        type: 'select',
+        options: ['Lead generation', 'Product demo', 'Partnership', 'Hiring solution pitch', 'Vendor onboarding', 'Investment discussion']
+      },
+      {
+        name: 'salesCycleLength',
+        label: 'What is your typical sales cycle length?',
+        type: 'select',
+        options: ['Immediate (1 to 7 days)', 'Medium (1 to 3 weeks)', 'Long (1 to 3 months)']
+      },
+      {
+        name: 'valueProposition',
+        label: 'What is your primary value proposition?',
+        type: 'select',
+        options: ['Cost reduction', 'Automation', 'Growth enablement', 'Efficiency', 'Security', 'Compliance']
       }
     ]
   },
   {
     id: 7,
-    title: 'Verification',
-    icon: FileCheck,
-    description: 'Complete your business verification',
+    title: 'Platform Usage & Success Metrics',
+    icon: BarChart3,
+    description: 'Define your success criteria',
     questions: [
       {
-        name: 'documentType',
-        label: 'What document will you provide for verification?',
+        name: 'successMetrics',
+        label: 'Which metrics matter most for your outreach success? (Select up to three)',
+        type: 'multiselect',
+        options: ['Response rate or engagement', 'Meetings scheduled', 'Qualified leads', 'Deal conversion', 'Influence or authority growth', 'Speed of outreach response']
+      },
+      {
+        name: 'aiExperimentationOpenness',
+        label: 'How open are you to experimenting with AI-driven outreach strategies?',
         type: 'select',
-        options: ['Business License', 'Tax ID', 'Registration Certificate', 'Other']
+        options: ['Very open (testing multiple AI approaches)', 'Moderately open (minor adjustments allowed)', 'Conservative (prefer default strategies)']
+      },
+      {
+        name: 'platformUsers',
+        label: 'How many users from your organization will actively use this platform?',
+        type: 'select',
+        options: ['1 to 5 users', '6 to 20 users', '21 to 50 users', 'More than 50 users']
       }
     ]
   }

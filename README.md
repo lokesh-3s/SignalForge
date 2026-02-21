@@ -59,13 +59,14 @@ User can edit and execute
 {
   email, password, authProvider, googleId,
   businessProfile: {
-    businessType, industry, employeeCount,
-    revenueTier, businessModel, averageOrderValue,
-    audienceDemographic[], purchaseFrequency,
-    acquisitionChannels[], activePlatforms[],
-    skuCount, peakSeasonality[],
-    primaryObjective, painPoints[],
-    documentType, verificationStatus
+    companyType, companySize, primaryOutreachObjective,
+    targetOrganizations, relevantSignals[], personalizationLevel,
+    signalResponseTime,
+    usefulContentTypes[], contentSuggestionFrequency,
+    aiVoiceOutreachComfort, aiExplanationDetail,
+    primaryOffering, idealCustomer[], outreachGoal, salesCycleLength, valueProposition,
+    successMetrics[], aiExperimentationOpenness, platformUsers,
+    verificationStatus
   },
   hasCompletedKYC: Boolean
 }
